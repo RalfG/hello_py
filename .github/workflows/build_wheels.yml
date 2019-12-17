@@ -17,4 +17,4 @@ jobs:
     - name: Content list
       uses: enricomarino/actions@v2
       with:
-        source: /
+        source: GITHUB_WORKSPACE/wheelhouse/
