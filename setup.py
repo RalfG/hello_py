@@ -1,4 +1,5 @@
 from setuptools import setup
+from Cython.Build import cythonize
 
 setup(
 	name='hello_py',
@@ -11,4 +12,5 @@ setup(
 	entry_points={'console_scripts': ['hello_py=hello_py.__main__:main']},
 	install_requires=[],
 	python_requires='>=3.6,<4',
+	ext_modules = cythonize("hello_py/hello_c.pyx")
 )
