@@ -1,4 +1,4 @@
-name: Upload Python Package
+name: Build wheels
 
 on:
   release:
@@ -16,4 +16,5 @@ jobs:
       with:
         # Python versions to target, space-separated
         python-versions: 'cp38-cp38'
+        build-requirements: 'cython'
         system-requirements: 'cmake28'
