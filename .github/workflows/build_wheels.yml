@@ -11,8 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Python wheels manylinux build
-      uses: RalfG/python-wheels-manylinux-build@b0046b7
+      uses: dries007/python-wheels-manylinux-build@163e79a
+
       with:
         # Python versions to target, space-separated
-        python_versions: 'cp36-cp36m cp37-cp37m cp38-cp38'
-        build_requirements: PyQt5
+        python-versions: 'cp38-cp38'
+        system-requirements: 'cmake28'
