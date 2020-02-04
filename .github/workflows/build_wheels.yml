@@ -17,4 +17,4 @@ jobs:
         # Python versions to target, space-separated
         python-versions: 'cp38-cp38'
         build-requirements: 'cython'
-        system-requirements: 'cmake28'
+        system-packages: 'cmake28'
