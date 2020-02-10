@@ -9,12 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Python wheels manylinux build
-      uses: dries007/python-wheels-manylinux-build@163e79a
+      uses: RalfG/python-wheels-manylinux-build@latest
 
       with:
         # Python versions to target, space-separated
         python-versions: 'cp38-cp38'
         build-requirements: 'cython'
-        system-packages: 'cmake28'
