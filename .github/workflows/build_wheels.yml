@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Python wheels manylinux build
-      uses: RalfG/python-wheels-manylinux-build@latest
+      uses: RalfG/python-wheels-manylinux-build@v0.2-dev6-manylinux2014_x86_64
 
       with:
         # Python versions to target, space-separated
