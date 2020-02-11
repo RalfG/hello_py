@@ -11,9 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        pwd
-        ls
-        tree /
+        - pwd
+        - ls
+        - ls /
     - name: Python wheels manylinux build
       uses: RalfG/python-wheels-manylinux-build@v0.2-dev10
       with:
