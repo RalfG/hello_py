@@ -13,7 +13,10 @@ jobs:
     - run: |
         pwd
         ls
-        ls /
+        ls /home/runner/work
+        ls /home/runner/work/_temp
+        ls /home/runner/work/_temp/_github_workflow
+        ls 
     - name: Python wheels manylinux build
       uses: RalfG/python-wheels-manylinux-build@v0.2-dev10
       with:
