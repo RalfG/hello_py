@@ -17,8 +17,4 @@ jobs:
         tree ./
         tree /home/runner/work
     - name: Python wheels manylinux build
-      uses: RalfG/python-wheels-manylinux-build@0f1be2b
-      with:
-        # Python versions to target, space-separated
-        python-versions: 'cp38-cp38'
-        build-requirements: 'cython'
+      uses: RalfG/python-wheels-manylinux-build@e7195a6
