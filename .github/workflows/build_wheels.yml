@@ -11,11 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
+        echo "pwd"
         pwd
-        ls
-        ls /home/runner/work
-        ls /home/runner/work/_temp
-        ls /home/runner/work/_temp/_github_workflow
+        sudo apt-get install tree
+        tree ./
+        tree /home/runner/work
     - name: Python wheels manylinux build
       uses: RalfG/python-wheels-manylinux-build@0f1be2b
       with:
