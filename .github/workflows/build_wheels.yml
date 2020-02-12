@@ -17,7 +17,7 @@ jobs:
         ls /home/runner/work/_temp
         ls /home/runner/work/_temp/_github_workflow
     - name: Python wheels manylinux build
-      uses: RalfG/python-wheels-manylinux-build@77041b6
+      uses: RalfG/python-wheels-manylinux-build@515420f
       with:
         # Python versions to target, space-separated
         python-versions: 'cp38-cp38'
