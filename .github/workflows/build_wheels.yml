@@ -6,9 +6,18 @@ on:
   push:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Python wheels manylinux build
       uses: RalfG/python-wheels-manylinux-build@v0.2-dev30-manylinux2014_x86_64
+      with:
+        python-versions: 'cp38-cp38'
+        build-requirements: 'cython numpy'
+    - name: Setup Python environment
+      uses: actions/setup-python@v1.1.1
+    - name: Install wheel
+      run: 'pip install wheelhouse/hello_py*-manylinux*.whl'
+    - name: Test wheel
+      run: 'hello_py'
