@@ -1,0 +1,36 @@
+{% set version = "0.1.0" %}
+{% set sha256 = "b1e08f7fdd13d0b004c6fa5c0a79fbbd4ef877dcc2f72882fb975b7b209f72c0" %}
+
+package:
+  name: "hello_py"
+  version: "{{ version }}"
+
+source:
+  #url: https://pypi.io/packages/source/h/hello_py/hello_py-{{ version }}.tar.gz
+  url: dist/hello_py-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: True  # [py27]
+  entry_points:
+    - hello_py=hello_py.__main__:main
+  script:
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - cython >=0.29.2,<1
+    - pip
+    - poetry
+    - python
+  run:
+    - python
+
+about:
+  home: http://github.com/ralfg/hello_py
+  license: Unlicense
+  license_file: LICENSE
+  summary: "Cython dummpy package"
