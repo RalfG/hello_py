@@ -1,1 +1,2 @@
-print("Hello World")
+def main():
+    print("And hello from Cython! ⚡")
